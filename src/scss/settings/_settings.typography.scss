@@ -1,0 +1,48 @@
+/** =====================================================================================
+ *  Defines the typographic baseline.
+ *  We define every size in pixels, the underlying system converts the
+ *  respective units to the responsive REM value.
+ ===================================================================================== */
+
+/**
+ * Our base font-size and line-height
+ */
+$base-font-size: 22 !default;
+$base-line-height: 32 !default;
+$line-height-ratio: $base-line-height/$base-font-size !default;
+
+$font-sizes: (
+        small: 14,
+        small-s: 15,
+        small-m: 16,
+        small-l: 18,
+        mid: 20,
+        mid-m: 21,
+        base: $base-font-size,
+        mid-l: 25,
+        large-s: 30,
+        large: 35,
+        large-m: 40,
+        large-m-md: 45,
+        large-l-sm: 50,
+        large-l-md: 65,
+        large-l: 70,
+     
+);
+
+/**
+ *	Here we assign short names for the font families
+ */
+$font-proxima-nova: 'ProximaNova', sans-serif;
+
+$font-freight-big: 'FreightBig', sans-serif;
+
+$_font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+$font-families: (
+        base: $font-freight-big,
+        secondary:$font-proxima-nova,
+  // Fallback font
+        system: $_font-system
+);
+

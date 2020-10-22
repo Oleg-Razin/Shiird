@@ -1,0 +1,45 @@
+/* Media query mixin for writing Mobile First
+ * ========================================== */
+
+
+@function convertBreakpointKeyToValue($breakpoint) {
+
+  @if map-has-key($breakpoints, $breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
+  }
+
+  @warn "Unknown breakpoint: `#{$breakpoint}` in $breakpoints. ";
+  @return null;
+}
+
+@mixin mq($min: null, $max: null) {
+  $query: "all" !default;
+
+  // Try to convert $min value if not number or null
+  @if(type-of($min) != number and $min != null){
+    $min: convertBreakpointKeyToValue($min);
+  }
+
+  // Try to convert $max value if not number or null
+  @if(type-of($max) != number and $max != null){
+    $max: convertBreakpointKeyToValue($max);
+  }
+
+  // set both min and max
+  @if ($min != null and $max != null) {
+    $query: "(min-width: #{$min}px) and (max-width: #{$max - 1}px)";
+  }
+    // set just min
+  @else if ($min != null and $max == null) {
+    $query: "(min-width: #{$min}px)";
+  }
+    // set just max
+  @else if ($min == null and $max != null) {
+    $query: "(max-width: #{$max - 1}px)";
+  }
+
+  @media screen and #{$query} {
+    @content;
+  }
+}
+

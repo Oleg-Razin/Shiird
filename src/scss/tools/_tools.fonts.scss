@@ -1,0 +1,91 @@
+/* ==========================================================================
+ * Font related functions
+ * ========================================================================== */
+
+
+/**
+ *  Calculate line-height ratio from font-size and line-height in px value
+ */
+
+@mixin line-height-ratio($font-size, $lh) {
+  line-height: $lh / map-get($font-sizes, $font-size);
+}
+
+
+/**
+ *  Mixin for setting font-size in REM through a Sass Map with all available sizes
+
+    USAGE:
+
+    .myClass {
+        @include font-size(x-large);
+    }
+
+ */
+
+@mixin font-size($size) {
+  @if map-get($font-sizes, $size) {
+    @include font-size(map-get($font-sizes, $size));
+  }
+    // When mapping isn't found calculate as if PX-value was given and return REM value
+  @else {
+    @if is-number($size) {
+      font-size: valueToRem($size);
+    }
+    @else {
+      @warn " `#{$size}` is not a valid value. It must be one of the following: `#{$font-sizes}`";
+    }
+  }
+}
+
+/**
+ *	A simple function for accessing the font families from our mapping
+
+	USAGE:
+
+	span {
+		@include font-family(primary);
+	}
+
+ */
+@mixin font-family($family: 'base') {
+  @if map-has-key($font-families, $family) {
+    font-family: map-get($font-families, $family);
+  }
+  @else {
+    @warn "Unknown family: `#{$family}` in $font-families. ";
+    font-family: map-get($font-families, system);
+  }
+}
+
+/**
+ *  Font mixin for setting font-size, font-weight, and line-height
+
+    USAGE:
+
+    .myClass {
+        @include font(x-large, 34, 500);
+    }
+
+    .myClass {
+      @include font(medium, $weight: 300);
+    }
+
+ */
+
+@mixin font($size, $lh: null, $weight: null) {
+  @include font-size($size);
+
+  @if $lh {
+    @include line-height-ratio($size, $lh);
+  }
+
+  @if $weight {
+    font-weight: $weight;
+  }
+}
+
+@mixin clearFont(){
+  font-size: 0;
+  line-height: 0;
+}
