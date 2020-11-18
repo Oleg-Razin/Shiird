@@ -7,15 +7,17 @@
 @import "../../node_modules/bootstrap/scss/_grid";
 
 
-@import "tools/tools";
+@import "1-settings/settings";
+@import "2-tools/tools";
+@import "3-organisms/organisms";
+@import "4-components/components";
+@import "5-sections/sections";
+@import "6-utilities/utilities";
+@import "7-elements/elements";
 
-@import "settings/settings";
 
-@import "components/components";
 
-@import "sections/sections";
 
-@import "organisms/organisms";
 
 
 

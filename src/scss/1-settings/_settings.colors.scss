@@ -1,0 +1,52 @@
+/**
+ *  Global color variables.
+ *	The underscore Never use them directly in the styles, only for functions and mixins.
+ */
+
+ $_color-primary-600: #2E2E2E !default;
+ $_color-primary-500: #252525 !default;
+ $_color-primary-400: #333333 !default;
+ $_color-primary-300: #373737!default;
+ $_color-primary-200: #504E4E !default;
+ $_color-primary-100: #5B5858 !default;
+
+ 
+ 
+ $_color-secondary-300: #4CAF50 !default;
+ $_color-secondary-200: #70BD59 !default;
+
+ 
+ $_color-grey-color-400: #777777  !default;
+ $_color-grey-color-300: #C2C2C2  !default;
+ $_color-grey-color-200: #D8D8D8 !default;
+ $_color-grey-color-100: #FBFBFB !default;
+
+ 
+ 
+ 
+ /**
+	*  Organize color variables in a Sass Map.
+	*  This way, the colors can be iterated, are more organized, and are more intuitive to reference.
+	*/
+ $palettes: (
+				 'primary': (
+								 100:  $_color-primary-100,
+								 200:  $_color-primary-200,
+								 300:  $_color-primary-300,
+								 400:  $_color-primary-400,
+								 base: $_color-primary-500,
+								 600:  $_color-primary-600,
+				 ),
+				 'secondary': (
+								 base: $_color-secondary-300,
+								 200: $_color-secondary-200,
+				 ),
+				 'grey-color': (
+								 400: $_color-grey-color-400,
+								 300: $_color-grey-color-300,
+								 200: $_color-grey-color-200,
+								 base: $_color-grey-color-100,
+				 ),
+ );
+ 
+ 

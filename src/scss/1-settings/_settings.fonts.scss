@@ -1,0 +1,54 @@
+@font-face {
+	font-family: 'Open Sans';
+	src: url('../../fonts/openSans/OpenSans-Regular.eot');
+	src: url('../../fonts/openSans/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
+			url('../../fonts/openSans/OpenSans-Regular.woff2') format('woff2'),
+			url('../../fonts/openSans/OpenSans-Regular.woff') format('woff'),
+			url('../../fonts/openSans/OpenSans-Regular.ttf') format('truetype'),
+			url('../../fonts/openSans/OpenSans-Regular.svg#OpenSans-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../../fonts/oswald/Oswald-SemiBold.eot');
+	src: url('../../fonts/oswald/Oswald-SemiBold.eot?#iefix') format('embedded-opentype'),
+			url('../../fonts/oswald/Oswald-SemiBold.woff2') format('woff2'),
+			url('../../fonts/oswald/Oswald-SemiBold.woff') format('woff'),
+			url('../../fonts/oswald/Oswald-SemiBold.ttf') format('truetype'),
+			url('../../fonts/oswald/Oswald-SemiBold.svg#Oswald-SemiBold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../../fonts/oswald/Oswald-Regular.eot');
+	src: url('../../fonts/oswald/Oswald-Regular.eot?#iefix') format('embedded-opentype'),
+			url('../../fonts/oswald/Oswald-Regular.woff2') format('woff2'),
+			url('../../fonts/oswald/Oswald-Regular.woff') format('woff'),
+			url('../../fonts/oswald/Oswald-Regular.ttf') format('truetype'),
+			url('../../fonts/oswald/Oswald-Regular.svg#Oswald-Regular') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Oswald';
+	src: url('../../fonts/oswald/Oswald-Bold.eot');
+	src: url('../../fonts/oswald/Oswald-Bold.eot?#iefix') format('embedded-opentype'),
+			url('../../fonts/oswald/Oswald-Bold.woff2') format('woff2'),
+			url('../../fonts/oswald/Oswald-Bold.woff') format('woff'),
+			url('../../fonts/oswald/Oswald-Bold.ttf') format('truetype'),
+			url('../../fonts/oswald/Oswald-Bold.svg#Oswald-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+
+
+
+$raleway: 'Raleway', sans-serif;
+$playfair: 'Playfair Display SC', serif;

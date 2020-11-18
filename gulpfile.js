@@ -94,8 +94,9 @@ gulp.task('build', gulp.series('clean', 'sass', 'css-min' , 'script','script-jqu
 gulp.task('watch', function(){
     gulp.watch('src/scss/*.scss', gulp.parallel('sass'));
     gulp.watch('src/libs/**/*.js', gulp.parallel('script'));
+    gulp.watch('src/*.html', gulp.parallel('html'));
     gulp.watch('src/js/*.js').on("change", browserSync.reload);
     gulp.watch('dist/*.html').on('change', browserSync.reload);
 });
 
-gulp.task('default', gulp.parallel('sass', 'css-min', 'script', 'browser-sync','watch','html'));
+gulp.task('default', gulp.parallel('html', 'sass', 'css-min', 'script', 'browser-sync','watch'));

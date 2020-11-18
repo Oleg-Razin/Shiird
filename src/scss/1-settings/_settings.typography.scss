@@ -7,41 +7,40 @@
 /**
  * Our base font-size and line-height
  */
-$base-font-size: 22 !default;
-$base-line-height: 32 !default;
+$base-font-size: 18 !default;
+$base-line-height: 24 !default;
 $line-height-ratio: $base-line-height/$base-font-size !default;
 
 $font-sizes: (
-        small: 14,
-        small-s: 15,
-        small-m: 16,
-        small-l: 18,
-        mid: 20,
-        mid-m: 21,
+        small: 10,
+        small-s: 12,
+        small-m: 13,
+        small-l: 14,
+        mid: 15,
         base: $base-font-size,
-        mid-l: 25,
-        large-s: 30,
+        mid-m: 20,
+        mid-l: 24,
+        large-s: 36,
         large: 35,
-        large-m: 40,
+        large-m: 42,
         large-m-md: 45,
-        large-l-sm: 50,
-        large-l-md: 65,
-        large-l: 70,
+        large-l-sm: 48,
+        large-l-md: 72,
      
 );
 
 /**
  *	Here we assign short names for the font families
  */
-$font-proxima-nova: 'ProximaNova', sans-serif;
+$font-oswald: 'Oswald', sans-serif;
 
-$font-freight-big: 'FreightBig', sans-serif;
+$font-open-sans: 'Open Sans', sans-serif;
 
 $_font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
 $font-families: (
-        base: $font-freight-big,
-        secondary:$font-proxima-nova,
+        base: $font-oswald,
+        secondary:$font-open-sans,
   // Fallback font
         system: $_font-system
 );

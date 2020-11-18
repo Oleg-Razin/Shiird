@@ -1,0 +1,100 @@
+/* ==========================================================================
+ * Basic elements (no class selectors allowed)
+ * ========================================================================== */
+
+/**
+ * Set up the html
+ *
+ * 1. Makes sure that some fonts are better rendered
+ * 2. Set font to lining figures
+ */
+ html {
+  /*  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "lnum";*/
+  box-sizing: border-box;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  @include font-family(base);
+  font-weight: 400;
+  color: palette(text);
+  overflow-x: hidden;
+
+  .container {
+    max-width: $container-width;
+  }
+
+}
+
+/**
+ * [1] Make sure elements like input and textarea inherit some base properties
+ *     https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/
+ *
+ * [2] Setting box-sizing the best way per:
+ *     https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  outline: none;
+  &,
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+/**
+ * [1] Turn off text-shadow when selecting text for better readability
+ */
+::selection {
+  background: palette(primary, 300);
+  color: #fff;
+  text-shadow: none; /* [1] */
+}
+
+/* Remove default margin around figure
+ */
+figure {
+  margin: 0;
+}
+
+/**
+ * [1] Setting 'vertical-align' removes the whitespace that appears under 'img'
+ *	   elements when they are dropped into a page as-is. Safer alternative to
+ *	   using 'display: block;'.
+ * [2] Remove border / especially on older browsers
+ */
+img, svg {
+  display: block;
+  vertical-align: middle; /*[1]*/
+  border: none; /*[2]*/
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: palette(primary);
+  text-decoration-skip-ink: auto; // pretty underlining links
+  text-decoration: none;
+}
+
+// Reset all top and bottom margins
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dd, figure,
+pre, table, fieldset, hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0 0 16px;
+  line-height: 1.75;
+}
+

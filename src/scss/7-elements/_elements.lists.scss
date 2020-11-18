@@ -1,0 +1,52 @@
+/** =====================================================================================
+ *  Lists
+ ===================================================================================== */
+
+/**
+ *	Default indentation value for lists
+ */
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  margin-left: 0;
+}
+
+dd {
+  margin-left: 0;
+}
+
+ul {
+  li {
+
+  }
+}
+
+ol {
+  li {
+
+  }
+
+}
+
+/**
+ *	Remove extra vertical spacing when nesting lists.
+ */
+
+li {
+  list-style-type: none;
+  > ul,
+  > ol {
+    margin-bottom: 0;
+  }
+}
+
+/**
+*	list-items needs resetting for our Lobotomized Owl selector
+*/
+
+li + li {
+  margin-top: 0;
+}
+

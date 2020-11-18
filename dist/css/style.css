@@ -2424,7 +2424,7 @@ a.text-dark:hover, a.text-dark:focus {
 
 .text-break {
   word-break: break-word !important;
-  overflow-wrap: break-word !important; }
+  word-wrap: break-word !important; }
 
 .text-reset {
   color: inherit !important; }
@@ -3120,6 +3120,56 @@ a.text-dark:hover, a.text-dark:focus {
   .offset-xl-11 {
     margin-left: 91.66667%; } }
 
+/**
+ *  Global color variables.
+ *	The underscore Never use them directly in the styles, only for functions and mixins.
+ */
+/**
+	*  Organize color variables in a Sass Map.
+	*  This way, the colors can be iterated, are more organized, and are more intuitive to reference.
+	*/
+@font-face {
+  font-family: 'Open Sans';
+  src: url("../../fonts/openSans/OpenSans-Regular.eot");
+  src: url("../../fonts/openSans/OpenSans-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/openSans/OpenSans-Regular.woff2") format("woff2"), url("../../fonts/openSans/OpenSans-Regular.woff") format("woff"), url("../../fonts/openSans/OpenSans-Regular.ttf") format("truetype"), url("../../fonts/openSans/OpenSans-Regular.svg#OpenSans-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../../fonts/oswald/Oswald-SemiBold.eot");
+  src: url("../../fonts/oswald/Oswald-SemiBold.eot?#iefix") format("embedded-opentype"), url("../../fonts/oswald/Oswald-SemiBold.woff2") format("woff2"), url("../../fonts/oswald/Oswald-SemiBold.woff") format("woff"), url("../../fonts/oswald/Oswald-SemiBold.ttf") format("truetype"), url("../../fonts/oswald/Oswald-SemiBold.svg#Oswald-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../../fonts/oswald/Oswald-Regular.eot");
+  src: url("../../fonts/oswald/Oswald-Regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/oswald/Oswald-Regular.woff2") format("woff2"), url("../../fonts/oswald/Oswald-Regular.woff") format("woff"), url("../../fonts/oswald/Oswald-Regular.ttf") format("truetype"), url("../../fonts/oswald/Oswald-Regular.svg#Oswald-Regular") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../../fonts/oswald/Oswald-Bold.eot");
+  src: url("../../fonts/oswald/Oswald-Bold.eot?#iefix") format("embedded-opentype"), url("../../fonts/oswald/Oswald-Bold.woff2") format("woff2"), url("../../fonts/oswald/Oswald-Bold.woff") format("woff"), url("../../fonts/oswald/Oswald-Bold.ttf") format("truetype"), url("../../fonts/oswald/Oswald-Bold.svg#Oswald-Bold") format("svg");
+  font-weight: 700;
+  font-style: normal; }
+
+/** =====================================================================================
+ *  Defines the typographic baseline.
+ *  We define every size in pixels, the underlying system converts the
+ *  respective units to the responsive REM value.
+ ===================================================================================== */
+/**
+ * Our base font-size and line-height
+ */
+/**
+ *	Here we assign short names for the font families
+ */
+/* ==========================================================================
+   Config settings
+   ========================================================================== */
 /**
  * Swiper 5.0.4
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -8134,68 +8184,175 @@ button.swiper-pagination-bullet {
 .fa, .fas {
   font-weight: 900; }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0; }
+.u-white {
+  color: #ffffff; }
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+.u-secondary-200 {
+  color: palette(secondary, 200); }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
+.u-primary-300 {
+  color: palette(text, 300); }
+
+.u-primary-250 {
+  color: palette(text); }
+
+.u-primary-200 {
+  color: palette(text, 200); }
+
+.u-primary-100 {
+  color: palette(text, 150); }
+
+.u-bg-primary-100 {
+  background-color: palette(primary, 100); }
+
+.u-bg-primary-150 {
+  background-color: palette(primary, 150); }
+
+.u-bg-primary-200 {
+  background-color: palette(primary, 400); }
+
+.u-bg-primary-300 {
+  background-color: palette(primary); }
+
+.u-bg-secondary {
+  background-color: palette(secondary, 200); }
+
+.u-bg-gradient {
+  background: linear-gradient(180deg, rgba(246, 247, 251, 0) 0%, #EAEBEF 44.79%); }
+
+.u-bg-img {
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.u-text-black {
+  font-weight: 900; }
+
+.u-text-bold {
+  font-weight: 700; }
+
+.u-disabled {
+  transform: translate3d(0, 0, 0) !important;
+  justify-content: center; }
+
+.u-star-opacity {
+  opacity: 0.5; }
+
+.u-overflow {
+  height: 100vh;
+  overflow: hidden; }
+
+/* ==========================================================================
+ * Basic elements (no class selectors allowed)
+ * ========================================================================== */
+/**
+ * Set up the html
+ *
+ * 1. Makes sure that some fonts are better rendered
+ * 2. Set font to lining figures
+ */
+html {
+  /*  -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "lnum";*/
+  box-sizing: border-box; }
 
 body {
-  line-height: 1; }
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  color: palette(text);
+  overflow-x: hidden; }
+  body .container {
+    max-width: 1200px; }
 
-ol, ul {
-  list-style: none; }
+/**
+ * [1] Make sure elements like input and textarea inherit some base properties
+ *     https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/
+ *
+ * [2] Setting box-sizing the best way per:
+ *     https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+* {
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  outline: none; }
+  *, *:before, *:after {
+    box-sizing: inherit; }
 
-blockquote, q {
-  quotes: none; }
+/**
+ * [1] Turn off text-shadow when selecting text for better readability
+ */
+::selection {
+  background: palette(primary, 300);
+  color: #fff;
+  text-shadow: none;
+  /* [1] */ }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
+/* Remove default margin around figure
+ */
+figure {
+  margin: 0; }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-img {
+/**
+ * [1] Setting 'vertical-align' removes the whitespace that appears under 'img'
+ *	   elements when they are dropped into a page as-is. Safer alternative to
+ *	   using 'display: block;'.
+ * [2] Remove border / especially on older browsers
+ */
+img, svg {
   display: block;
-  width: 100%; }
+  vertical-align: middle;
+  /*[1]*/
+  border: none;
+  /*[2]*/
+  max-width: 100%;
+  height: auto; }
+
+a {
+  color: palette(primary);
+  text-decoration-skip-ink: auto;
+  text-decoration: none; }
+
+h1, h2, h3, h4, h5, h6, hgroup,
+ul, ol, dd, figure,
+pre, table, fieldset, hr {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+p {
+  margin: 0 0 16px;
+  line-height: 1.75; }
 
 /** =====================================================================================
- *  Defines the typographic baseline.
- *  We define every size in pixels, the underlying system converts the
- *  respective units to the responsive REM value.
+ *  Lists
  ===================================================================================== */
 /**
- * Our base font-size and line-height
+ *	Default indentation value for lists
  */
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  margin-left: 0; }
+
+dd {
+  margin-left: 0; }
+
 /**
- *	Here we assign short names for the font families
+ *	Remove extra vertical spacing when nesting lists.
  */
-/* ==========================================================================
-   Config settings
-   ========================================================================== */
+li {
+  list-style-type: none; }
+  li > ul,
+  li > ol {
+    margin-bottom: 0; }
+
+/**
+*	list-items needs resetting for our Lobotomized Owl selector
+*/
+li + li {
+  margin-top: 0; }
