@@ -1,0 +1,226 @@
+/** =====================================================================================
+ *  Toolbox functions
+ ===================================================================================== */
+
+
+/**
+ *  Maths helpers.
+ *  Halve and double numbers, returning rounded integers.
+
+    USAGE:
+
+    .foo {
+        padding: halve(30px);
+    }
+
+ */
+
+@function quarter($number) {
+  @return round($number / 4);
+}
+
+@function halve($number) {
+  @return round($number / 2);
+}
+
+@function double($number) {
+  @return round($number * 2);
+}
+
+@function triple($number) {
+  @return round($number * 3);
+}
+
+@function quadruple($number) {
+  @return round($number * 4);
+}
+
+
+/**
+ *  Remove the unit of a length
+ *  @param {Number} $number - Number to remove unit from
+ *  @return {Number} - Unitless number
+ */
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+
+/* Check if value is number */
+
+@function is-number($value) {
+  @return type-of($value) == 'number';
+}
+
+
+/* Value to Em */
+
+@function valueToRem($value) {
+  $noUnits: strip-unit($value);
+  @return #{$noUnits / 16 * 1rem};
+}
+
+/* Value to Rem */
+
+@function valueToEm($value) {
+  $noUnits: strip-unit($value);
+  @return #{$noUnits / 16 * 1em};
+}
+
+
+/**
+ *	A simple function for accessing the colors from our mapping
+ *	To access colors in our palette, we use a very simple custom Sass function
+
+	USAGE:
+
+	a {
+		color: palette(primary);
+
+		&:hover {
+			color: palette(primary, 400);
+		}
+	}
+
+ */
+
+@function palette($palette, $level: 'base') {
+  @if map-has-key($palettes, $palette) {
+
+    @if map-has-key(map-get($palettes, $palette), $level) {
+      @return map-get(map-get($palettes, $palette), $level);
+    }
+
+    // Color level not found, so set base as $level to prevent an error
+    @warn "Unknown level `#{$level}` for color `#{$palette}` in $palette.";
+    @return deeppink
+  }
+
+  @warn "Unknown color: `#{$palette}` in $palette. ";
+  @return hotpink;
+}
+
+
+/**
+ *	A simple function for setting a consistent box-shadow
+
+	USAGE:
+
+	.card {
+		@include box-shadow();
+	}
+
+	.card--alt {
+		@include box-shadow(low);
+	}
+
+ */
+@mixin box-shadow($type: low){
+  @if($type == 'low') {
+    box-shadow: 0 0 8px 0 rgba(black,0.4)
+  }
+}
+
+/**
+ *	A simple function for setting a consistent border-radius
+
+	USAGE:
+
+	.card {
+		@include border-radius;
+	}
+
+	.card--alt {
+		@include border-radius(large);
+	}
+
+ */
+@mixin border-radius($type: small) {
+  @if ($type == 'small') {
+    border-radius: $border-radius-small;
+  }
+  @if ($type == 'medium') {
+    border-radius: $border-radius-medium;
+  }
+  @if ($type == 'large') {
+    border-radius: $border-radius-large;
+  }
+}
+
+/**
+ * Lobotomized Owl Selector mixin:
+ * - Set spacing for consecutive items with margin-top on all but the first item
+
+	USAGE:
+
+	.box {
+		@include owl-children;
+	}
+
+	.card__item {
+		@include owl;
+	}
+
+ */
+
+// Gives the children of the element spacing
+@mixin owl-children($margin: #{$line-height-ratio}rem) {
+  & > * + * {
+    margin-top: $margin;
+  }
+}
+
+// Gives the element itself spacing
+@mixin owl($margin: #{$line-height-ratio}rem) {
+  & + & {
+    margin-top: $margin;
+  }
+}
+
+/**
+ *  Show hyphens for every browser supporting it
+ *  and will break lines in every other browser
+ */
+
+@mixin hyphenate {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+@function gradient($gradient, $level: 'base') {
+  @if map-has-key($gradients, $gradient) {
+    @if map-has-key(map-get($gradients, $gradient), $level) {
+      @return map-get(map-get($gradients, $gradient), $level);
+    }
+
+    @error "Unknown level `#{$level}` for color `#{$gradient}` in $palette.";
+  }
+
+  @error "Unknown color: `#{$gradient}` in $palette. ";
+}
+
+/*
+ *  Restrict an element to a max-width for creating gutters on the side
+ */
+@mixin contain() {
+  width: calc(100% - #{double($site-gutter-width)}); // Making sure it doesn't get to small with little content
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mq(m) {
+    width: calc(100% / #{$tablet-columns + 2} * #{$tablet-columns});
+  }
+
+  @include mq(l) {
+    width: calc(100% / #{$site-columns + 2} * #{$site-columns});
+    max-width: $site-max-width;
+  }
+}

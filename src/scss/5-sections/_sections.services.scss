@@ -1,0 +1,14 @@
+.s-services{
+	padding: 60px 0 80px;
+	@include mq($md){
+		padding: 70px 0 90px;
+	}
+
+	.c-titles__secondary{
+		margin-bottom: 50px;
+	}
+
+	.swiper-slide{
+		width: auto;
+	}
+}

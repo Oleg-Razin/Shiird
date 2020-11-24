@@ -1,0 +1,12 @@
+.o-header{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	
+	width: 100%;
+}
+
+.o-header--fixed{
+	background: linear-gradient(177.86deg, #000000 -41.81%, rgba(0, 0, 0, 0.0001) 82.48%);
+}

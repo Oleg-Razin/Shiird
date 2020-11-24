@@ -1,0 +1,40 @@
+.c-nav{
+	padding: 30px 0; 
+}
+
+.c-nav__wrap{
+	margin: 0 -30px;
+}
+
+.c-nav__item{
+	position: relative;
+
+	margin: 0 30px;
+
+	
+
+	&:after{
+		position: absolute;
+		content: '';
+		transition: all .3s ease-in;
+		bottom: 0;
+		right: 0;
+
+		width: 18px;
+
+		padding-top: 5px;
+
+		border-bottom: 2px solid palette(secondary);
+	}
+
+	&:hover{
+		&:after{
+			width: calc(100% + 5px);
+		}
+	}
+}
+
+.c-nav__link{
+	@include font(small-l, 22, 400);
+	@include font-family(base);
+}

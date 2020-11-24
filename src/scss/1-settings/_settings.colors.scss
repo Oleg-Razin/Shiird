@@ -20,6 +20,7 @@
  $_color-grey-color-300: #C2C2C2  !default;
  $_color-grey-color-200: #D8D8D8 !default;
  $_color-grey-color-100: #FBFBFB !default;
+ $_color-grey-color-50:#F2F2F2 !default;
 
  
  
@@ -46,6 +47,7 @@
 								 300: $_color-grey-color-300,
 								 200: $_color-grey-color-200,
 								 base: $_color-grey-color-100,
+								 50: $_color-grey-color-50,
 				 ),
  );
  

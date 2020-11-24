@@ -1,4 +1,28 @@
-//@import "/libs/libs";
+/*!
+Theme Name: ESR
+Theme URI: http://underscores.me/
+Author: Essencedesign
+Author URI: https://www.essencedesign.com
+Description: ESR Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: esr
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Chiquita is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+
+//Bootstap required
+
 
 @import "../../node_modules/bootstrap/scss/_functions";
 @import "../../node_modules/bootstrap/scss/variables";
@@ -6,20 +30,29 @@
 @import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/_grid";
 
-
-@import "1-settings/settings";
-@import "2-tools/tools";
-@import "3-organisms/organisms";
-@import "4-components/components";
-@import "5-sections/sections";
-@import "6-utilities/utilities";
-@import "7-elements/elements";
+//Main setting
+@import '1-Settings/settings';
 
 
+//Tools setting
+@import '2-Tools/tools';
 
+// Elements styles
+@import '3-Elements/elements';
 
+// Components styles
+@import '4-Components/components';
 
+// Sections
+@import '5-Sections/sections';
 
+// Header, footer, sidebar (area of components)
+@import '6-Organisms/organisms';
 
+/*  7 - UTILITIES
+ *  High-specificity, very explicit selectors.
+ *  Overrides and helper classes.
+ =========================================================== */
+@import '7-Utilities/utilities';
 
 

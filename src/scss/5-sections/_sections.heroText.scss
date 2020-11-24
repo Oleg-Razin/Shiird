@@ -1,0 +1,18 @@
+.s-hero-text{
+	padding: 60px 0 70px;
+
+	@include mq($md){
+		padding: 75px 0 80px;
+	}
+}
+
+.s-hero-text__content{
+	margin: 0 auto;
+	@include mq($md){
+		max-width: 825px;
+	}
+}
+
+.s-hero-text__heading{
+	margin-bottom: 50px;
+}

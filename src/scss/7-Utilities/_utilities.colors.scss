@@ -1,0 +1,43 @@
+.u-white {
+    color: #fff;
+}
+
+.u-primary {
+    color: palette(primary); 
+}
+
+.u-primary-200 {
+    color: palette(primary, 200);
+}
+
+.u-secondary{
+    color: palette(secondary);
+}
+
+.u-bg-primary{ 
+    background-color: palette(primary);
+}
+
+.u-bg-grey{ 
+    background-color: palette(grey-color);
+}
+.u-bg-grey-300{ 
+    background-color: palette(grey-color, 300);
+}
+.u-bg-grey-200{ 
+    background-color: palette(grey-color, 200);
+}
+.u-bg-grey-100{ 
+    background-color: palette(grey-color, 100);
+}
+.u-bg-grey-50{ 
+    background-color: palette(grey-color, 50);
+}
+
+.u-bg-secondary{
+    background-color: palette(secondary);
+}
+
+.u-bg-white {
+    background-color: #fff;
+}

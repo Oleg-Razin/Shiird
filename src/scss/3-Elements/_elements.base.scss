@@ -8,11 +8,11 @@
  * 1. Makes sure that some fonts are better rendered
  * 2. Set font to lining figures
  */
- html {
-  /*  -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    font-feature-settings: "lnum";*/
+html {
+/*  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "lnum";*/
   box-sizing: border-box;
 
 }
@@ -20,16 +20,18 @@
 body {
   margin: 0;
   padding: 0;
+  @include font-size(base);
+  line-height: $line-height-ratio;
   @include font-family(base);
   font-weight: 400;
-  color: palette(text);
-  overflow-x: hidden;
+  color: palette(primary);
 
-  .container {
+
+  .container{
     max-width: $container-width;
   }
-
 }
+
 
 /**
  * [1] Make sure elements like input and textarea inherit some base properties
@@ -42,7 +44,7 @@ body {
   font-family: inherit;
   line-height: inherit;
   color: inherit;
-  outline: none;
+
   &,
   &:before,
   &:after {
@@ -54,8 +56,8 @@ body {
  * [1] Turn off text-shadow when selecting text for better readability
  */
 ::selection {
-  background: palette(primary, 300);
-  color: #fff;
+  background: palette(grey-color);
+  color: inherit;
   text-shadow: none; /* [1] */
 }
 
@@ -79,6 +81,7 @@ img, svg {
   height: auto;
 }
 
+
 a {
   color: palette(primary);
   text-decoration-skip-ink: auto; // pretty underlining links
@@ -86,14 +89,14 @@ a {
 }
 
 // Reset all top and bottom margins
-h1, h2, h3, h4, h5, h6, hgroup,
-ul, ol, dd, figure,
-pre, table, fieldset, hr {
+h1,h2,h3,h4,h5,h6,hgroup,
+ul,ol,dd, figure,
+pre,table,fieldset,hr {
   margin-top: 0;
   margin-bottom: 0;
 }
 
-p {
+p{
   margin: 0 0 16px;
   line-height: 1.75;
 }
