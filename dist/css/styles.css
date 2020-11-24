@@ -9641,9 +9641,6 @@ li + li {
 .c-hero {
   position: relative;
   height: 100vh; }
-  @media screen and (min-width: 768px) {
-    .c-hero {
-      height: 900px; } }
   .c-hero:after {
     position: absolute;
     content: '';

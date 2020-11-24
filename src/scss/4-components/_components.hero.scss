@@ -60,10 +60,6 @@
 	position: relative;
 	height: 100vh;
 
-	@include mq($md){
-		height: 900px;
-	}
-
 	&:after{
 		position: absolute;
 		content: '';
