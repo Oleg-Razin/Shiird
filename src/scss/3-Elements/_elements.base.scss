@@ -22,7 +22,7 @@ body {
   padding: 0;
   @include font-size(base);
   line-height: $line-height-ratio;
-  @include font-family(base);
+  @include font-family(secondary);
   font-weight: 400;
   color: palette(primary);
 

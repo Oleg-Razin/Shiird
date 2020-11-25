@@ -7,11 +7,11 @@
 	}
 }
 
-// .c-titles__secondary{
-// 	@include font(large, 50, 700);
-// 	color: palette(primary);
-// 	@include font-family(secondary);
-// }
+.c-titles__secondary{
+	@include font(large-s, 53, 700);
+	color: palette(primary, 400);
+	@include font-family(base);
+}
 
 // .c-titles__tertiary{
 // 	@include font(mid, 30, 700);
