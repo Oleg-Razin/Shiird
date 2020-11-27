@@ -1,0 +1,73 @@
+.c-services-card{
+	position: relative;
+	padding: 50px 45px 30px;
+
+	display: flex;
+	flex-direction: column;
+
+	box-shadow: 0px 0px 20px #DBDBDB;
+
+	&:after{
+		position: absolute;
+		content: '';
+		left: 0;
+		bottom: 0;
+
+		width: 0;
+		border-bottom: 3px solid palette(secondary);
+
+		transition: all .5s	ease-in;
+	}
+
+	&:hover{
+		&:after{
+			width: 100%;
+		}
+
+		.c-services-card__icon-wrap{
+			img{
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.c-services-card__header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-bottom: 16px;
+}
+
+.c-services-card__icon-wrap{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 50px;
+	height: 50px;
+
+	box-shadow: 0px 0px 20px #DBDBDB;
+
+	border-radius: 100%;
+
+	overflow: hidden;
+	img{
+		display: block;
+
+		width: 25px;
+		height: 25px;
+
+		opacity: 0.5;
+
+		transition: all .5s	ease-in;
+	}
+}
+
+.c-services-card__description{
+	@include font(small-s, 25, 400);
+	letter-spacing: 1.008px;
+
+	flex-grow: 1;
+}

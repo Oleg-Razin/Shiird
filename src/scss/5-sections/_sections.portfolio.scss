@@ -1,0 +1,7 @@
+.s-portfolio{
+	padding: 70px 0;
+
+	@include mq($lg){
+		padding: 130px 0;
+	}
+}

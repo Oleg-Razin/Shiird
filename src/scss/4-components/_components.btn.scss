@@ -1,66 +1,73 @@
-// button {
-//   -webkit-appearance: none;
-//   -moz-appearance: none;
-//   appearance: none;
-// }
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
 
-// .c-btn {
-//   display: inline-block;
-//   padding: 18px 55px;	
-//   @include font(small-s, 24, 700);
-//   border-radius: 5px;
-//   cursor: pointer;
-//   transition: all 0.3s cubic-bezier(0.4, 0, 0, 1);
-//   text-align: center;
-//   box-sizing: border-box;
-// }
+.c-btn {
+	display: inline-block;
+	
+  @include font(small-m, 17, 400);
+	color: palette(primary);
+	text-align: center;
+	text-transform: uppercase;
 
-// .c-btn--primary {
-//   background-color: palette(secondary);
-// 	color: #fff;
-// 	&:hover{
-// 		background-color: palette(primary);
-// 	}
-// }
+	cursor: pointer;
+	
+	transition: all 0.3s cubic-bezier(0.4, 0, 0, 1);
+	
+	opacity: 0.5;
 
-// .c-btn--secondary {
-//   background-color:transparent;
-// 	color: palette(primary);
-// 	border: 1px solid palette(primary);
-// 	&:hover{
-// 		background-color: palette(primary);
-// 		color: #fff;
-// 	}
-// }
+	box-sizing: border-box;
 
-// .c-btn--primary-light {
-//   background-color: #fff;
-// 	color: palette(secondary);
-// 	&:hover{
-// 		background-color: palette(secondary);
-// 		color: #fff;
-// 	}
-// }
+	&:hover{
+		opacity: 1;
+	}
+}
 
-// .c-btn--secondary-light {
-//   background-color: transparent;
-// 	color: #fff;
-// 	border: 1px solid #fff;
-// 	&:hover{
-// 		background-color: #fff;
-// 		color: palette(secondary);
-// 	}
-// }
+.c-btn--primary {
+	@include font(base, 24, 300);
+	@include font-family(secondary);
+	letter-spacing: 0.832px;
+	
+	&:before{
+		position: absolute;
+		content: '';
+		width: 50px;
+		height: 3;
+		opacity: 0;
+		background-color: palette(secondary);
+		top: 50%;
+		left: -5px;
+		transform: translateY(-50%);
+		transition: all .3s ease-in;
+	}
 
-// .c-btn__link{
-// 	display: inline-block;
-// 	@include font(base, 27, 700);
-// 	color: palette(primary);
-// 	&:hover{
-// 		text-decoration: underline;
-// 	}
-// }
+	&:after{
+		position: absolute;
+		content: '';
+		width: 50px;
+		height: 3;
+		opacity: 0;
+		background-color: palette(secondary);
+		top: 50%;
+		right: -5px;
+		transform: translateY(-50%);
+		transition: all .3s ease-in;
+	}
 
-// .c-btn__link--light{
-// 	color: #fff;
-// }
+	&:hover{
+		&:before{
+			opacity: 1;
+		}
+
+		&:after{
+			opacity: 1;
+		}
+	}
+}
+
+.c-btn--secondary {
+	@include font-family(secondary);
+	letter-spacing: 0.64px;
+}

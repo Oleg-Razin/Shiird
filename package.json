@@ -35,6 +35,7 @@
         "autoprefixer": "^9.5.1",
         "gulp-cli": "^2.0.1",
         "gulp-order": "^1.2.0",
+        "isotope-layout": "^3.0.6",
         "swiper": "^6.3.5",
         "video.js": "^7.5.3"
     },

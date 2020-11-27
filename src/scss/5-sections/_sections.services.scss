@@ -1,14 +1,31 @@
 .s-services{
 	padding: 60px 0 80px;
+
+	overflow-x: hidden;
 	@include mq($md){
-		padding: 70px 0 90px;
+		padding: 130px 0;
 	}
 
 	.c-titles__secondary{
+		position: relative;
+
 		margin-bottom: 50px;
+
+		max-width: 300px;
+
+		letter-spacing: 3.072px;
+		@include mq($lg){
+			margin-bottom: 130px;
+		}
 	}
 
-	.swiper-slide{
-		width: auto;
+	&:hover{
+		.c-titles__secondary{
+			&::after{
+				width: calc(100% + 150px);
+
+				border-color: palette(secondary);
+			}
+		}
 	}
 }

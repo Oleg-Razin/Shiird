@@ -6,6 +6,15 @@
 	@include mq($md){
 		padding: 130px 0;
 	}
+	&:hover{
+		.c-titles__secondary{
+			&::after{
+				width: calc(100% + 150px);
+
+				border-color: palette(secondary);
+			}
+		}
+	}
 }
 
 .s-about__item{

@@ -8,21 +8,43 @@
 }
 
 .c-titles__secondary{
+	position: relative;
 	@include font(large-s, 53, 700);
-	color: palette(primary, 400);
 	@include font-family(base);
+
+	&:after{
+		position: absolute;
+		content: '';
+		bottom: -7px;
+		left: 0;
+
+		width: 45px;
+
+		border-top: 2px solid palette(primary);
+
+		transition: all 2s ease-in .3s;
+	}
 }
 
-// .c-titles__tertiary{
-// 	@include font(mid, 30, 700);
-// 	color: palette(primary);
-// 	@include font-family(secondary);
+.c-titles__tertiary{
+	position: relative;
+	@include font(mid-m, 30, 300);
+	@include font-family(base);
+	text-transform: uppercase;
+	&:after{
+		position: absolute;
+		content: '';
+		bottom: -7px;
+		left: 0;
 
-// 	@include mq($md){
-// 		@include font(mid-s, 40, 700);
-// 		color: palette(primary);
-// 	}
-// }
+		width: 45px;
+
+		border-top: 2px solid palette(primary);
+
+	
+	}
+
+}
 
 // .c-titles__default{
 // 	@include font(small-s, 28, 700);

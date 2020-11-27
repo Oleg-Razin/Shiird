@@ -20,6 +20,10 @@
     color: palette(primary, 600);
 }
 
+.u-grey-400 {
+    color: palette(grey-color, 400);
+}
+
 .u-secondary{
     color: palette(secondary);
 }
@@ -37,9 +41,7 @@
 .u-bg-grey-200{ 
     background-color: palette(grey-color, 200);
 }
-.u-bg-grey-100{ 
-    background-color: palette(grey-color, 100);
-}
+
 .u-bg-grey-50{ 
     background-color: palette(grey-color, 50);
 }

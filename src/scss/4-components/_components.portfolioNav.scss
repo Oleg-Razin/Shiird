@@ -1,0 +1,39 @@
+.c-portfolio-nav{
+	padding: 30px 40px 80px 0;
+
+	.c-titles__secondary{
+		margin-bottom: 50px;
+
+		max-width: 300px;
+	}
+
+	&:hover{
+		.c-titles__secondary{
+			&::after{
+				width: calc(100% + 150px);
+
+				border-color: palette(secondary);
+			}
+		}
+	}
+}
+.c-portfolio-nav__buttons{
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+
+	margin: 0 -10px;
+
+	.c-btn{
+		margin: 0 10px;
+		padding: 0;
+
+		letter-spacing: 0.832px;
+		
+		border: none;
+		
+		background-color: transparent;
+
+		outline: none;
+	}
+}

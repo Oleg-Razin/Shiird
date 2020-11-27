@@ -113,7 +113,7 @@ gulp.task('scripts', function () {
         .pipe(order([
             'swiper.min.js',
             'magnific-popup.min.js',
-            'video.min.js',
+            'isotope.pkgd.min.js',
             'global.js',
         ]))
         .pipe(plumber())
