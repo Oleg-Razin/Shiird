@@ -115,6 +115,7 @@ gulp.task('scripts', function () {
             'magnific-popup.min.js',
             'isotope.pkgd.min.js',
             'global.js',
+            'packery-mode.pkgd.min.js',
         ]))
         .pipe(plumber())
         .pipe(sourcemaps.init())

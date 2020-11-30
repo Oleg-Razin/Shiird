@@ -5,6 +5,7 @@ button {
 }
 
 .c-btn {
+	position: relative;
 	display: inline-block;
 	
   @include font(small-m, 17, 400);
@@ -29,12 +30,14 @@ button {
 	@include font(base, 24, 300);
 	@include font-family(secondary);
 	letter-spacing: 0.832px;
-	
+	z-index: 2;
+	background-color: transparent;
 	&:before{
 		position: absolute;
 		content: '';
 		width: 50px;
-		height: 3;
+		height: 3px;
+		z-index: -1;
 		opacity: 0;
 		background-color: palette(secondary);
 		top: 50%;
@@ -46,8 +49,9 @@ button {
 	&:after{
 		position: absolute;
 		content: '';
-		width: 50px;
-		height: 3;
+		width: 73px;
+		height: 3px;
+		z-index: 2;
 		opacity: 0;
 		background-color: palette(secondary);
 		top: 50%;
@@ -68,6 +72,6 @@ button {
 }
 
 .c-btn--secondary {
-	@include font-family(secondary);
+	@include font-family(base);
 	letter-spacing: 0.64px;
 }

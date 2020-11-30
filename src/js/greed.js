@@ -1,9 +1,11 @@
 $(document).ready(function() {
 	
 	$('.c-grid').isotope({
-		itemSelector: '.c-grid__item',
+		layoutMode: 'packery',
+		itemSelector: '.с-grid__item',
 		masonry: {
-			columnWidth: 100
-		}
+				columnWidth: '.c-grid__sizer'
+		},
+		percentPosition: true
 	});
 });

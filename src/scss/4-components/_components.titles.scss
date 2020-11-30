@@ -40,27 +40,5 @@
 		width: 45px;
 
 		border-top: 2px solid palette(primary);
-
-	
 	}
-
 }
-
-// .c-titles__default{
-// 	@include font(small-s, 28, 700);
-// 	color: palette(primary);
-// 	@include font-family(secondary);	
-
-// 	@include mq($md){
-// 		@include font(mid, 36, 700);
-// 		color: palette(primary);
-// 	}
-// }
-
-// .c-titles__heading-spacing{
-// 	@include font(small-s, 26, 700);
-// 	color: palette(primary);
-// 	@include font-family(base);
-// 	text-transform: uppercase;
-// 	letter-spacing: 4px;
-// }
