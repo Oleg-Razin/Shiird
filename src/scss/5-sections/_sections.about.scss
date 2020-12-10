@@ -64,23 +64,23 @@
 	}
 }
 
-@keyframes sectionImage{
-	0%{
-		transform: translate(-50%,-50%) skew(0deg, 0deg);
-	}
-	25%{
-		transform: translate(-50%,-50%) skew(0deg, 20deg);
-	}
-	50%{
-		transform: translate(-50%,-50%) skew(0deg, 0deg);
-	}
-	75%{
-		transform: translate(-50%,-50%) skew(0deg, -20deg);
-	}
-	100%{
-		transform: translate(-50%,-50%) skew(0deg, 0deg);
-	}
-}
+// @keyframes sectionImage{
+// 	0%{
+// 		transform: translate(-50%,-50%) skew(0deg, 0deg);
+// 	}
+// 	25%{
+// 		transform: translate(-50%,-50%) skew(0deg, 20deg);
+// 	}
+// 	50%{
+// 		transform: translate(-50%,-50%) skew(0deg, 0deg);
+// 	}
+// 	75%{
+// 		transform: translate(-50%,-50%) skew(0deg, -20deg);
+// 	}
+// 	100%{
+// 		transform: translate(-50%,-50%) skew(0deg, 0deg);
+// 	}
+// }
 
 .s-about__image{
 	position: absolute;
@@ -92,7 +92,7 @@
 		display: block;
 	}
 
-	animation: sectionImage 5s infinite ease-in;
+	// animation: sectionImage 5s infinite ease-in;
 
 }
 

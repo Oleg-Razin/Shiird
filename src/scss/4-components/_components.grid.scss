@@ -33,8 +33,8 @@
     height: 100%;
     width: 100%;
     opacity: 0;
-    background: radial-gradient(ellipse at center, #4CAF50 0%, #FFFFFF 100%, #70BD59 100%);
-    transition: opacity 2s ease-in;
+    background: radial-gradient(ellipse at center, #000000 0%, #ffffff 100%, #000000 100%);
+    transition: opacity 1s ease-in;
   }
 }
 
@@ -88,6 +88,7 @@
   @include font(base, 25, 300);
   @include font-family(secondary);
   letter-spacing: 1.152px;
+  text-transform: capitalize;
 }
 
 .c-grid__text{
@@ -124,7 +125,7 @@
     top: 64%;
     left: -5px;
     transform: translateY(-50%);
-    transition: all 2s ease-in .3s;
+    transition: all 1s ease-in .3s;
   }
 }
 
@@ -136,8 +137,6 @@
 
 	.c-titles__secondary{
 		margin-bottom: 50px;
-
-		max-width: 300px;
 	}
 
 	&:hover{

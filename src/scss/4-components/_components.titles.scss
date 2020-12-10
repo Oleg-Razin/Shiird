@@ -8,6 +8,7 @@
 }
 
 .c-titles__secondary{
+	display: inline-block;
 	position: relative;
 	@include font(large-s, 53, 700);
 	@include font-family(base);
