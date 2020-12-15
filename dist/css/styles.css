@@ -9406,8 +9406,8 @@ img.mfp-img {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("../../src/fonts/fontawesome/webfonts/fa-brands-400.eot");
-  src: url("../../src/fonts/fontawesome/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../../src/fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"), url("../../src/fonts/fontawesome/webfonts/fa-brands-400.woff") format("woff"), url("../../src/fonts/fontawesome/webfonts/fa-brands-400.ttf") format("truetype"), url("../../src/fonts/fontawesome/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
+  src: url("../../fonts/fontawesome/webfonts/fa-brands-400.eot");
+  src: url("../../fonts/fontawesome/webfonts/fa-brands-400.eot?#iefix") format("embedded-opentype"), url("../../fonts/fontawesome/webfonts/fa-brands-400.woff2") format("woff2"), url("../../fonts/fontawesome/webfonts/fa-brands-400.woff") format("woff"), url("../../fonts/fontawesome/webfonts/fa-brands-400.ttf") format("truetype"), url("../../fonts/fontawesome/webfonts/fa-brands-400.svg#fontawesome") format("svg"); }
 
 .fab {
   font-family: "Font Awesome 5 Brands"; }
@@ -9417,8 +9417,8 @@ img.mfp-img {
   font-style: normal;
   font-weight: 400;
   font-display: auto;
-  src: url("../../src/fonts/fontawesome/webfonts/fa-regular-400.eot");
-  src: url("../../src/fonts/fontawesome/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../../src/fonts/fontawesome/webfonts/fa-regular-400.woff2") format("woff2"), url("../../src/fonts/fontawesome/webfonts/fa-regular-400.woff") format("woff"), url("../../src/fonts/fontawesome/webfonts/fa-regular-400.ttf") format("truetype"), url("../../src/fonts/fontawesome/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
+  src: url("../../fonts/fontawesome/webfonts/fa-regular-400.eot");
+  src: url("../../fonts/fontawesome/webfonts/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("../../fonts/fontawesome/webfonts/fa-regular-400.woff2") format("woff2"), url("../../fonts/fontawesome/webfonts/fa-regular-400.woff") format("woff"), url("../../fonts/fontawesome/webfonts/fa-regular-400.ttf") format("truetype"), url("../../fonts/fontawesome/webfonts/fa-regular-400.svg#fontawesome") format("svg"); }
 
 .fab, .far {
   font-weight: 400; }
@@ -9428,8 +9428,8 @@ img.mfp-img {
   font-style: normal;
   font-weight: 900;
   font-display: auto;
-  src: url("../../src/fonts/fontawesome/webfonts/fa-solid-900.eot");
-  src: url("../../src/fonts/fontawesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../../src/fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"), url("../../src/fonts/fontawesome/webfonts/fa-solid-900.woff") format("woff"), url("../../src/fonts/fontawesome/webfonts/fa-solid-900.ttf") format("truetype"), url("../../src/fonts/fontawesome/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
+  src: url("../../fonts/fontawesome/webfonts/fa-solid-900.eot");
+  src: url("../../fonts/fontawesome/webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../../fonts/fontawesome/webfonts/fa-solid-900.woff2") format("woff2"), url("../../fonts/fontawesome/webfonts/fa-solid-900.woff") format("woff"), url("../../fonts/fontawesome/webfonts/fa-solid-900.ttf") format("truetype"), url("../../fonts/fontawesome/webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
 
 .fa, .far, .fas {
   font-family: "Font Awesome 5 Free"; }
@@ -9678,10 +9678,23 @@ button {
     border-top: 2px solid #252525; }
 
 .c-nav {
-  padding: 30px 0; }
+  padding: 30px 0;
+  display: none; }
+  @media screen and (min-width: 992px) {
+    .c-nav {
+      display: block; } }
 
 .c-nav__wrap {
-  margin: 0 -30px; }
+  margin: 0 -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+  @media screen and (max-width: 991px) {
+    .c-nav__wrap {
+      height: 100vh; } }
 
 .c-nav__item {
   position: relative;
@@ -10008,6 +10021,131 @@ button {
   .с-grid__nav-buttons .c-btn--secondary {
     font-family: "Open Sans", sans-serif; }
 
+.c-testimonials {
+  position: relative; }
+
+.c-testimonials__slide {
+  position: relative;
+  padding-bottom: 30px; }
+  .c-testimonials__slide:after {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
+    max-width: 510px;
+    width: 100%;
+    border-bottom: 1px solid #D8D8D8;
+    opacity: 0.5;
+    -webkit-transition: border-color 0.5s ease-in;
+    -o-transition: border-color 0.5s ease-in;
+    transition: border-color 0.5s ease-in; }
+  .c-testimonials__slide:hover:after {
+    border-color: #4CAF50; }
+  .c-testimonials__slide:hover .c-testimonials__score span:not(.inactive):before {
+    color: #4CAF50; }
+
+.c-testimonials__description {
+  max-width: 735px;
+  margin: 0 auto 35px;
+  font-size: 1.125rem;
+  line-height: 1.72222;
+  font-weight: 400;
+  letter-spacing: 0.896px;
+  color: #373737; }
+  .c-testimonials__description:after {
+    display: block;
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin: 30px auto 0;
+    background: url("../../src/image/icons/quote.svg");
+    background-position: center;
+    background-size: cover; }
+
+.c-testimonials__author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 25px; }
+
+.c-testimonials__nave {
+  font-size: 1.125rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1.152px; }
+  .c-testimonials__nave:after {
+    display: inline-block;
+    content: '/';
+    margin: 0 5px;
+    color: #D8D8D8; }
+
+.c-testimonials__position {
+  font-size: 0.9375rem;
+  line-height: 2.06667;
+  font-weight: 400;
+  color: #D8D8D8; }
+
+.c-testimonials__score {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .c-testimonials__score span {
+    margin: 0 5px;
+    font-size: 15px;
+    color: #373737; }
+    .c-testimonials__score span:before {
+      -webkit-transition: color .5s ease-in .3s;
+      -o-transition: color .5s ease-in .3s;
+      transition: color .5s ease-in .3s; }
+    .c-testimonials__score span.inactive {
+      opacity: 0.2; }
+
+.c-testimonials__nav {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 15px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.c-testimonials__nav-btn {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-size: cover;
+  cursor: pointer; }
+
+.c-testimonials__nav-btn--prev {
+  background-image: url("../../src/image/icons/prev-btn.svg"); }
+
+.c-testimonials__nav-btn--next {
+  background-image: url("../../src/image/icons/next-btn.svg"); }
+
 .s-hero {
   position: relative;
   background-color: #000000; }
@@ -10219,6 +10357,72 @@ button {
   letter-spacing: 1.152px;
   color: #777777; }
 
+.s-testimonials {
+  padding: 115px 0; }
+
+.s-contact__subtitle {
+  font-size: 0.875rem;
+  line-height: 2.57143;
+  font-weight: 400;
+  letter-spacing: 1.55556px;
+  color: #373737;
+  opacity: 0.8;
+  -webkit-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  transition: all .5s ease-in; }
+
+.s-contact__item {
+  padding: 70px 30px 100px;
+  -webkit-transition: all .5s ease-in;
+  -o-transition: all .5s ease-in;
+  transition: all .5s ease-in; }
+  .s-contact__item:hover {
+    background-color: #70BD59; }
+
+.s-contact__icon {
+  width: 35px;
+  height: 35px;
+  margin: 0 auto 20px; }
+  .s-contact__icon svg {
+    -webkit-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    transition: all .5s ease-in; }
+
+.s-contact__link {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 400;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2.66667px;
+  color: #373737;
+  -webkit-transition: color .5s ease-in .5s;
+  -o-transition: color .5s ease-in .5s;
+  transition: color .5s ease-in .5s; }
+  .s-contact__link:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    left: -5px;
+    width: calc(100% + 10px);
+    height: 2px;
+    background-color: #252525;
+    -webkit-transition: opacity 0.5s ease-in, top 0.5s ease-in 0.5s, background-color ease-in 1s;
+    -o-transition: opacity 0.5s ease-in, top 0.5s ease-in 0.5s, background-color ease-in 1s;
+    transition: opacity 0.5s ease-in, top 0.5s ease-in 0.5s, background-color ease-in 1s;
+    opacity: 0; }
+  .s-contact__link:hover {
+    color: #ffffff; }
+    .s-contact__link:hover:after {
+      opacity: 0.5;
+      top: 100%;
+      background-color: #ffffff; }
+
 .o-header {
   position: fixed;
   top: 0;
@@ -10230,6 +10434,127 @@ button {
   background: -webkit-gradient(linear, right top, left top, color-stop(-17.62%, #000000), color-stop(82.37%, rgba(0, 0, 0, 0.0001)));
   background: -o-linear-gradient(right, #000000 -17.62%, rgba(0, 0, 0, 0.0001) 82.37%);
   background: linear-gradient(270deg, #000000 -17.62%, rgba(0, 0, 0, 0.0001) 82.37%); }
+
+.o-header__logo {
+  max-width: 55px; }
+  .o-header__logo polygon {
+    fill: #504E4E;
+    -webkit-transition: fill 0.3s ease-in;
+    -o-transition: fill 0.3s ease-in;
+    transition: fill 0.3s ease-in; }
+    .o-header__logo polygon:nth-child(2) {
+      fill: #4CAF50; }
+  .o-header__logo:hover polygon {
+    fill: #4CAF50; }
+    .o-header__logo:hover polygon:nth-child(2) {
+      fill: #504E4E; }
+
+.o-header__menu-toggle .ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-transition: -webkit-transform 400ms;
+  transition: -webkit-transform 400ms;
+  -o-transition: transform 400ms;
+  transition: transform 400ms;
+  transition: transform 400ms, -webkit-transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.o-header__menu-toggle .hamRotate.active {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.o-header__menu-toggle .hamRotate180.active {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg); }
+
+.o-header__menu-toggle .line {
+  fill: none;
+  -webkit-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  -o-transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #fff;
+  stroke-width: 5.5;
+  stroke-linecap: round; }
+
+.o-header__menu-toggle .ham5 .top {
+  stroke-dasharray: 40 82; }
+
+.o-header__menu-toggle .ham5 .bottom {
+  stroke-dasharray: 40 82; }
+
+.o-header__menu-toggle .ham5.active .top {
+  stroke-dasharray: 14 82;
+  stroke-dashoffset: -72px; }
+
+.o-header__menu-toggle .ham5.active .bottom {
+  stroke-dasharray: 14 82;
+  stroke-dashoffset: -72px; }
+
+.o-footer {
+  padding: 140px 0 80px; }
+
+.o-footer__adress {
+  margin-bottom: 10px;
+  font-size: 0.8125rem;
+  line-height: 1.46154;
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.832px;
+  color: #ffffff;
+  opacity: 0.5; }
+
+.o-footer__link-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px; }
+
+.o-footer__link {
+  font-size: 0.8125rem;
+  line-height: 1.46154;
+  font-weight: 300;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.832px;
+  color: #ffffff;
+  opacity: 0.5; }
+  .o-footer__link:first-child:after {
+    display: inline-block;
+    content: '-';
+    margin: 0 5px; }
+
+.o-footer__social-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin: 0 10px;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0.5;
+  -webkit-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in; }
+  .o-footer__social-link:hover {
+    background-color: #fff;
+    color: #2E2E2E; }
+  .o-footer__social-link i {
+    -webkit-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in; }
 
 /*  7 - UTILITIES
  *  High-specificity, very explicit selectors.
@@ -10264,6 +10589,9 @@ button {
 
 .u-bg-primary {
   background-color: #252525; }
+
+.u-bg-primary-600 {
+  background-color: #2E2E2E; }
 
 .u-bg-grey {
   background-color: #FBFBFB; }

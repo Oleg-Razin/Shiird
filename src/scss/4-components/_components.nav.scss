@@ -1,9 +1,20 @@
 .c-nav{
 	padding: 30px 0; 
+	display: none;
+	@include mq($lg){
+		display: block;
+	}
+
+
 }
 
 .c-nav__wrap{
 	margin: 0 -30px;
+	display: flex;
+	justify-content: flex-end;
+	@include mq($max:$lg){
+		height: 100vh;
+	}
 }
 
 .c-nav__item{

@@ -20,7 +20,7 @@ var axe = require('gulp-axe-webdriver'),
     sass = require('gulp-sass'),
     svgSymbols = require('gulp-svg-symbols'),
     sourcemaps = require('gulp-sourcemaps'),
-    uglify = require('gulp-uglify'),
+    terser = require('gulp-terser'),
     webp = require('gulp-webp'),
     zip = require('gulp-zip'),
     order = require("gulp-order");
@@ -122,7 +122,7 @@ gulp.task('scripts', function () {
         .pipe(concat('scripts.js'))
         .pipe(gulp.dest(outputs.js))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(sourcemaps.write('/'))
         .pipe(gulp.dest(outputs.js))
         .pipe(browsersync.reload({ stream: true }))
@@ -136,7 +136,7 @@ gulp.task('home', function () {
         .pipe(concat('home.js'))
         .pipe(gulp.dest(outputs.js))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(sourcemaps.write('/'))
         .pipe(gulp.dest(outputs.js))
         .pipe(browsersync.reload({ stream: true }))
@@ -162,7 +162,7 @@ gulp.task('scripts_light', function () {
         .pipe(concat('scripts_light.js')) //for fabricator
         .pipe(gulp.dest(outputs.js))
         .pipe(rename({ suffix: '.min' }))
-        .pipe(uglify())
+        .pipe(terser())
         .pipe(sourcemaps.write('/'))
         .pipe(gulp.dest(outputs.js))
         .pipe(browsersync.reload({ stream: true }))

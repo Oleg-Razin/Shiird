@@ -1,0 +1,83 @@
+.s-contact__subtitle{
+	@include font(small-l, 36, 400);
+	letter-spacing: 1.55556px;
+	color: palette(primary, 300);
+	
+	opacity: 0.8;
+	
+	transition: all .5s ease-in;
+}
+
+.s-contact__item{
+	padding: 70px 30px 100px;
+
+	transition: all .5s ease-in;
+	&:hover{
+		background-color: palette(secondary, 200);
+
+		// .s-contact__link{
+		// 	color: #ffffff;
+		// }
+		
+		// .s-contact__subtitle{
+		// 	color: #ffffff;
+		// }
+
+		// svg{
+		// 	fill: #ffffff;
+		// }
+	}
+}
+
+.s-contact__icon{
+	width: 35px;
+	height: 35px;
+	
+	margin: 0 auto 20px;
+	
+	svg{
+		transition: all .5s ease-in;
+	}
+}
+
+.s-contact__link{
+	display: inline-block;
+
+	position: relative;
+	
+	margin-bottom: 20px;
+	
+	@include font(mid-l, 36, 400);
+	@include font-family(base);
+	letter-spacing: 2.66667px;
+	color: palette(primary, 300);
+	
+	transition: color .5s ease-in .5s;
+	
+	&:after{
+		position: absolute;
+		content: '';
+		
+		top: 0;
+		transform: translateY(-50%);
+		left: -5px;
+		
+		width: calc(100% + 10px);
+		height: 2px;
+		background-color: palette(primary);
+		
+		transition: opacity 0.5s ease-in, top 0.5s ease-in 0.5s, background-color ease-in 1s;
+		
+		opacity: 0;
+	}
+	&:hover{
+		color: #ffffff;
+		&:after{
+			opacity: 0.5;
+			top: 100%;
+			background-color: #ffffff;
+		}
+	}
+}
+
+

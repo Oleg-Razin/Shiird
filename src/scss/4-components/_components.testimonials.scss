@@ -1,0 +1,143 @@
+.c-testimonials{
+	position: relative;
+}
+
+.c-testimonials__slide{
+	position: relative;
+	
+	padding-bottom: 30px;
+
+	&:after{
+		position: absolute;
+		content: '';
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+
+		max-width: 510px;
+		width: 100%;
+
+		border-bottom: 1px solid palette(grey-color, 200);
+
+		opacity: 0.5;
+		transition: border-color 0.5s ease-in;
+	}
+
+	&:hover{
+		&:after{
+			border-color: palette(secondary);
+		}
+
+		.c-testimonials__score{
+			span:not(.inactive){
+				&:before{
+					color: palette(secondary);
+				}
+			}
+		}
+	}
+}
+
+.c-testimonials__description{
+	max-width: 735px;
+	margin: 0 auto 35px;
+
+	@include font(base,31,400);
+	letter-spacing: 0.896px;
+	color: palette(primary, 300);
+
+	&:after{
+		display: block;
+		content: '';
+
+		width: 20px;
+		height: 20px;
+
+		margin: 30px auto 0; 
+
+		background: url('../../src/image/icons/quote.svg');
+		background-position: center;
+		background-size: cover;
+	}
+}
+
+.c-testimonials__author{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+
+	margin-bottom: 25px;
+}
+
+.c-testimonials__nave{
+	@include font(base, 27, 400);
+	@include font-family(base);
+	letter-spacing: 1.152px;
+
+	&:after{
+		display: inline-block;
+		content: '/';
+		margin: 0 5px;
+		color: palette(grey-color, 200);
+	}
+
+}
+
+.c-testimonials__position{
+	@include font(mid, 31, 400);
+	color: palette(grey-color, 200);
+}
+
+.c-testimonials__score{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	span{
+		margin: 0 5px;
+
+		font-size: 15px;
+		color: palette(primary, 300);
+
+		&:before{
+			transition: color .5s ease-in .3s;
+		}
+
+		&.inactive{
+			opacity: 0.2;
+		}
+	}
+}
+
+.c-testimonials__nav{
+	position: absolute;
+	z-index: 10;
+	left: 0;
+	bottom: 15px;
+
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.c-testimonials__nav-btn{
+	display: inline-block;
+
+	width: 20px;
+	height: 20px;
+
+	background-position: center;
+	background-size: cover;
+
+	cursor: pointer;
+}
+
+.c-testimonials__nav-btn--prev{
+	background-image: url('../../src/image/icons/prev-btn.svg');
+}
+
+.c-testimonials__nav-btn--next{
+	background-image: url('../../src/image/icons/next-btn.svg');
+}
