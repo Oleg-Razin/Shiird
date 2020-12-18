@@ -2,13 +2,20 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 10;
+	z-index: 100;
 	
 	width: 100%;
+	@include mq($max: $lg){
+		background-color: palette(primary, 600);
+	}
 }
 
 .o-header--fixed{
-	background: linear-gradient(270deg, #000000 -17.62%, rgba(0, 0, 0, 0.0001) 82.37%);
+	background-color: palette(primary, 600);
+
+	@include mq($lg){
+		background: linear-gradient(270deg, #000000 -17.62%, rgba(0, 0, 0, 0.0001) 82.37%);
+	}
 }
 
 .o-header__logo{

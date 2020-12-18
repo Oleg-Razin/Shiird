@@ -24,15 +24,15 @@
         "gulp-plumber": "^1.2.0",
         "gulp-rename": "1.2.2",
         "gulp-sass": "3.1.0",
-        "gulp-terser": "2.0.0",
+        "gulp-terser": "^2.0.0",
         "gulp-sourcemaps": "2.6.3",
         "gulp-svg-symbols": "2.0.2",
-        "gulp-terser": "^2.0.0",
         "gulp-webp": "^4.0.1",
         "gulp-zip": "4.1.0",
         "merge-stream": "1.0.1"
     },
     "dependencies": {
+        "animate.css": "^4.1.1",
         "autoprefixer": "^9.5.1",
         "gulp-cli": "^2.0.1",
         "gulp-order": "^1.2.0",

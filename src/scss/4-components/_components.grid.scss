@@ -7,9 +7,11 @@
 .с-grid__item, .c-grid__sizer{
   position: relative;
 
-  float: left;
-  width: 50%;
-  height: auto;
+  @include mq($lg){
+    float: left;
+    width: 50%;
+    height: auto;
+  }
 }
 
 .с-grid__item{
@@ -151,10 +153,13 @@
 }
 .с-grid__nav-buttons{
 	display: flex;
-	flex-wrap: nowrap;
 	align-items: center;
-
-	margin: 0 -10px;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+  
+  @include mq($md){
+    flex-wrap: nowrap;
+  }
 
 	.c-btn{
 		margin: 0 10px;

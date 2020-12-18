@@ -1,7 +1,9 @@
 .c-nav{
 	padding: 30px 0; 
 	display: none;
+	
 	@include mq($lg){
+
 		display: block;
 	}
 
@@ -14,38 +16,71 @@
 	justify-content: flex-end;
 	@include mq($max:$lg){
 		height: 100vh;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-end;
 	}
 }
 
 .c-nav__item{
+	display: block;
+
 	position: relative;
 
-	margin: 0 30px;
-
-	
+	width: 100%;
+	text-align: center;
 
 	&:after{
 		position: absolute;
 		content: '';
 		transition: all .3s ease-in;
 		bottom: 0;
-		right: 0;
 
-		width: 18px;
+		height: 50%;
+		width: 45%;
+		left: 50px;
+		z-index: -1;
 
-		padding-top: 5px;
+		background-color: rgba(palette(secondary),0.5);
+		transform: skew(-30deg, 0deg);
+		@include mq($lg){
+			left: initial;
+			right: 0;
+			z-index: 1;
+			height: 0;
+			width: 18px;
+	
+			padding-top: 5px;
+	
+			border-bottom: 2px solid palette(secondary);
 
-		border-bottom: 2px solid palette(secondary);
+			transform: none;
+		}
 	}
 
-	&:hover{
-		&:after{
-			width: calc(100% + 5px);
+	@include mq($lg){
+		margin: 0 30px;
+		width: auto;
+		text-align: left;
+		&:hover{
+			&:after{
+				width: calc(100% + 5px);
+			}
 		}
+
 	}
 }
 
 .c-nav__link{
-	@include font(small-l, 22, 400);
+	display: inline-block;
+
+	@include font(large-m, 50, 400);
 	@include font-family(base);
+	text-shadow: -35px 24px 0px palette(secondary);
+	letter-spacing: 2px;
+
+	@include mq($lg){
+		@include font(small-l, 22, 400);
+		text-shadow:none;
+	}
 }

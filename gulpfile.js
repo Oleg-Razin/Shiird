@@ -105,7 +105,7 @@ gulp.task('sass', function () {
 /* Concatenate & Minify JS */
 gulp.task('scripts', function () {
     return gulp.src([
-        '!' + inputs.js + '/home.js',
+        '!' + inputs.js + '/scripts.js',
         inputs.js + '/shared/*.js', 
         inputs.js + '/*.js'
         ])
@@ -130,7 +130,7 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('home', function () {
-    return gulp.src([inputs.js + '/home.js'])
+    return gulp.src([inputs.js + '/scripts.js'])
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('home.js'))
