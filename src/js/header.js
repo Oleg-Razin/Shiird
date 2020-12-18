@@ -49,7 +49,8 @@ $(document).ready(function() {
 			if ($(window).width() > 992){
 				menuToggle.removeClass('active');
 				menuWrap.css('display','');
-				menuLink.removeClass('animate__animated animate__bounceInRight animate__bounceOutRight' )
+				menuLink.removeClass('animate__animated animate__bounceInRight animate__bounceOutRight' );
+				menuItem.removeClass('animate__animated animate__bounceInLeft animate__bounceOutLeft' );
 				$('body').removeClass('overflow-hidden');
 			}
 		};
