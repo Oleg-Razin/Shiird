@@ -1,8 +1,7 @@
 .s-services{
-	padding: 60px 0 80px;
+	padding: 60px 0;
 
-	overflow-x: hidden;
-	@include mq($md){
+	@include mq($lg){
 		padding: 130px 0;
 	}
 
@@ -20,9 +19,46 @@
 	&:hover{
 		.c-titles__secondary{
 			&::after{
-				width: calc(100% + 150px);
+				width: calc(100% + 40px);
+        border-color: palette(secondary);
+        
+        @include mq($md){
+          width: calc(100% + 150px);
+        }
+			}
+		}
+	}
+}
 
-				border-color: palette(secondary);
+.s-services__btn{
+	height: 100%;
+
+	@include mq($lg){
+		margin-bottom: 25px;
+	}
+	.c-btn{
+		padding: 16px;
+		color: rgba(palette(primary),0.5);
+		opacity: 1;
+		z-index: 1;
+		&:after{
+			position: absolute;
+			content: '';
+			bottom: 0;
+			left: -10px;
+			z-index: 0;
+			height: 50%;
+			width: 100%;
+
+			background-color: rgba(palette(secondary),0.5);
+			transform: skew(-30deg, 0deg);
+
+			transition: all .3s ease-in;
+		}
+		&:hover{
+			color: rgba(palette(primary),1);
+			&:after{
+				left: 15px;
 			}
 		}
 	}

@@ -38,6 +38,7 @@
         "gulp-order": "^1.2.0",
         "isotope-layout": "^3.0.6",
         "isotope-packery": "^2.0.1",
+        "magnific-popup": "^1.1.0",
         "swiper": "^6.3.5",
         "video.js": "^7.5.3"
     },

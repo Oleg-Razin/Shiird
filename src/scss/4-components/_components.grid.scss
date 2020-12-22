@@ -15,6 +15,11 @@
 }
 
 .с-grid__item{
+  @include mq($max: $lg){
+    width: 100%;
+  }
+
+
   &:hover{
     .c-grid__img:after{
       opacity: .3;
@@ -41,7 +46,16 @@
 }
 
 .с-grid__item--right{
-  padding: 70px 0 70px 135px;
+  padding: 30px 0;
+  @include mq($lg){
+    padding: 70px 0 70px 135px;
+  }
+
+  .c-grid__img{
+    @include mq($max: $lg){
+      margin-left: auto;
+    }
+  }
 
   .c-grid__heading{
     left: 0;
@@ -51,10 +65,29 @@
     padding-right: 35%;
     text-align: right;
   }
+
+  .c-grid__img{
+    img{
+      @include mq($max:$lg){
+
+        margin-left: auto;
+      }
+    }
+  }
 }
 
 .с-grid__item--left{
-  padding: 70px 135px 70px 0;
+  padding: 30px 0;
+
+  @include mq($lg){
+    padding: 70px 135px 70px 0;
+  }
+
+  .c-grid__img{
+    @include mq($max: $lg){
+      margin-right: auto;
+    }
+  }
 
   .c-grid__heading{
     right: 0;
@@ -67,18 +100,19 @@
   }
 
   &.с-grid__item--nav{
-    padding: 120px 50px 100px 0;
+    padding: 30px 0;
+    @include mq($lg){
+      padding: 120px 50px 100px 0;
+    }
   }
-}
 
-.с-grid__item--footer{
-  padding-top: 250px;
-  text-align: right;
+  .c-grid__img{
+    img{
+      @include mq($max:$lg){
 
-  .c-grid__btn{
-    height: 100px;
-
-    margin-top: 0;
+        margin-right: auto;
+      }
+    }
   }
 }
 
@@ -113,7 +147,7 @@
   
   position: relative;
 
-  @include font(large-l-sm, 71, 300);
+  @include font(large-s, 50, 300);
   @include font-family(base);
   letter-spacing: 3.072px;
   text-transform: uppercase;
@@ -128,6 +162,10 @@
     left: -5px;
     transform: translateY(-50%);
     transition: all 1s ease-in .3s;
+  }
+
+  @include mq($md){
+    @include font(large-l-sm, 71, 300);
   }
 }
 
@@ -144,16 +182,21 @@
 	&:hover{
 		.c-titles__secondary{
 			&::after{
-				width: calc(100% + 150px);
+        width: calc(100% + 40px);
+        border-color: palette(secondary);
+        
+        @include mq($md){
+          width: calc(100% + 150px);
+        }
 
-				border-color: palette(secondary);
 			}
 		}
 	}
 }
 .с-grid__nav-buttons{
 	display: flex;
-	align-items: center;
+  align-items: center;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0 -10px;
   
@@ -166,12 +209,17 @@
 		padding: 0;
 
 		letter-spacing: 0.832px;
-		
+    
 		border: none;
 		
 		background-color: transparent;
 
-		outline: none;
+    outline: none;
+    
+    @include mq($max: $lg){
+      @include font-size(mid-m);
+      margin-bottom: 10px;
+    }
   }
   
   .c-btn--secondary{

@@ -29,7 +29,6 @@ $(document).ready(function() {
 			var sliderContainer = $(this).find('.swiper-container');
 			var nextSlide = $(this).find('.c-testimonials__nav-btn--next');
 			var prevSlide = $(this).find('.c-testimonials__nav-btn--prev');
-			console.log('hi	')
 			var slider = new Swiper($(sliderContainer),{
 				speed: 300,
 				loop: true,

@@ -14,7 +14,7 @@
             <div class="col-lg-2">
                 <div class="o-header__logo-wrap d-flex align-items-center justify-content-between">
                     <div class="o-header__logo">
-                        <a href="#" class="o-header__logo-link">
+                        <a href="#logo" class="o-header__logo-link">
                             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 width="440.347px" height="440.348px" viewBox="0 0 440.347 440.348" style="enable-background:new 0 0 440.347 440.348;"
                                 xml:space="preserve">
@@ -41,19 +41,19 @@
                 <nav class="c-nav">
                     <ul class="c-nav__wrap">
                         <li class="c-nav__item">
-                            <a href="#" class="c-nav__link u-white">WORKS</a>
+                            <a href="#about" class="c-nav__link u-white">ABOUT</a>
                         </li>
                         <li class="c-nav__item">
-                            <a href="#" class="c-nav__link u-white">ABOUT</a>
+                            <a href="#services" class="c-nav__link u-white">SERVICES</a>
                         </li>
                         <li class="c-nav__item">
-                            <a href="#" class="c-nav__link u-white">SERVICES</a>
+                            <a href="#works" class="c-nav__link u-white">WORKS</a>
                         </li>
                         <li class="c-nav__item">
-                            <a href="#" class="c-nav__link u-white">CONTACT</a>
+                            <a href="#team" class="c-nav__link u-white">TEAM</a>
                         </li>
                         <li class="c-nav__item">
-                            <a href="#" class="c-nav__link u-white">BLOG</a>
+                            <a href="#contact" class="c-nav__link u-white">CONTACT</a>
                         </li>
                     </ul>
                 </nav>
@@ -117,7 +117,7 @@
         </div>
     </div>
 </section>
-<section class="s-about">
+<section id="about" class="s-about">
     <div class="s-about__image s-about__image--left">
         <img src="src/image/sections/image1.jpg" alt="Image1">
     </div>
@@ -152,7 +152,7 @@
     </div>
 </section>
 
-<section class="s-services u-bg-grey">
+<section id="services" class="s-services u-bg-grey">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -160,7 +160,7 @@
                     Our Services
                 </h2>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="c-services-card u-bg-white">
                     <div class="c-services-card__header">
                         <h3 class="c-titles__tertiary u-primary">
@@ -178,7 +178,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="c-services-card u-bg-white">
                     <div class="c-services-card__header">
                         <h3 class="c-titles__tertiary u-primary">
@@ -196,7 +196,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-6 col-lg-4">
                 <div class="c-services-card u-bg-white">
                     <div class="c-services-card__header">
                         <h3 class="c-titles__tertiary u-primary">
@@ -214,10 +214,16 @@
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-6 col-lg-12">
+                <div class="s-services__btn d-flex justify-content-center align-items-center ">
+                    <a href="#contactPopap" class="c-btn c-btn--secondary JS-contact-popap">Contact Us</a>
+                </div>
+            </div>   
         </div>
     </div>
 </section>
-<section class="s-grid u-bg-white">
+<section id="works" class="s-grid u-bg-white">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -233,7 +239,7 @@
                                 <button class="c-btn c-btn--secondary" data-filter=".web,.main">WEB DESIGN</button>
                                 <button class="c-btn c-btn--secondary" data-filter=".branding,.main">BRANDING</button>
                                 <button class="c-btn c-btn--secondary" data-filter=".photography,.main">PHOTOGRAPHY</button>
-                                <button class="c-btn c-btn--secondary" data-filter=":not(.branding),.main">ILLUSTRATION</button>
+                                <button class="c-btn c-btn--secondary" data-filter=":not(.branding, .web),.main">ILLUSTRATION</button>
                               </div>
                         </div>
                     </div>
@@ -285,7 +291,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="с-grid__item  web branding">
+                    <div class="с-grid__item branding">
                         <div class="c-grid__img">
                             <img src="src/image/works/image4.jpg" alt="image4">
                         </div>
@@ -301,19 +307,33 @@
                             </div>
                         </div>
                     </div>
-                    <div class="с-grid__item с-grid__item--footer main">
-                        <div class="c-grid__btn">
-                            <a href="#" class="c-btn c-btn--secondary">view more</a>
+                    <div class="с-grid__item web">
+                        <div class="c-grid__img">
+                            <img src="src/image/works/image5.jpg" alt="image4">
+                        </div>
+                        <div class="c-grid__heading">
+                            <h3 class="c-grid__title">WEB</h3><br>
+                            <h3 class="c-grid__title">DEVELOPMENT</h3>
+                        </div>
+                        <div class="c-grid__description">
+                            <h4 class="c-grid__subtitle">web develop</h4>
+                            <p class="c-grid__text u-grey-300">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <div class="c-grid__btn">
+                                <a href="#" class="c-btn c-btn--primary">READ MORE</a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="col-12 text-center">
+                <a href="#" class="c-btn c-btn--secondary">view more</a>
+            </div>
         </div>
     </div>
 </section>
-<section class="s-team">
+<section id="team" class="s-team">
     <div class="container">
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-12">
                 <div class="s-team__title">
                     <h2 class="c-titles__secondary">
@@ -321,7 +341,7 @@
                     </h2>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="s-team__card u-bg-img">
                     <img src="src/image/team/person1.png" alt="person1" class="s-team__img">
                     <div class="s-team__description text-center u-primary">
@@ -339,7 +359,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="s-team__card u-bg-img">
                     <img src="src/image/team/person3.png" alt="person3" class="s-team__img">
                     <div class="s-team__description text-center u-primary">
@@ -357,7 +377,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <div class="s-team__card u-bg-img">
                     <img src="src/image/team/person2.png" alt="person2" class="s-team__img">
                     <div class="s-team__description text-center u-primary">
@@ -434,8 +454,7 @@
                                 <div class="c-testimonials__slide text-center">
                                     <div class="c-testimonials__description">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat expedita veritatis, totam sint ad odio in voluptates numquam necessitatibus consectetur pariatur itaque harum libero cupiditate ipsum, reprehenderit fugiat reiciendis perspiciatis!
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                         </p>
                                     </div>
                                     <div class="c-testimonials__author">
@@ -468,7 +487,7 @@
     </div>
 </section>
 
-<section class="s-contact">
+<section id="contact" class="s-contact">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 p-0">
@@ -477,7 +496,7 @@
                         <div class="s-contact__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512"><g id="Outline"><g><path d="M53.42,20A3.94,3.94,0,0,0,54,18a4,4,0,0,0-8,0,3.91,3.91,0,0,0,.56,2h-3A12.33,12.33,0,0,0,44,17a12,12,0,0,0-24,0,12.33,12.33,0,0,0,.39,3H9a3,3,0,0,0-3,3V49a3,3,0,0,0,3,3H21.13l-2.67,4H16a3,3,0,0,0-3,3v2a1,1,0,0,0,1,1H48a1,1,0,0,0,1-1V59a3,3,0,0,0-3-3H43.54l-2.67-4H53a3,3,0,0,0,3-3V23A3,3,0,0,0,53.42,20ZM48,18a2,2,0,1,1,2,2A2,2,0,0,1,48,18ZM32,7A10,10,0,1,1,22,17,10,10,0,0,1,32,7ZM29.58,36a2,2,0,0,1-2.31,1.62l-6.85-1.21a1,1,0,0,0-.35,2l6.85,1.21a4.14,4.14,0,0,0,.7.06,4,4,0,0,0,3.52-2.13l2.33.2A3,3,0,0,0,35.76,37l5.92-5.44a2,2,0,0,1,2.9.21,2.12,2.12,0,0,1-.32,2.86l-8.8,8.07A5,5,0,0,1,32.08,44H14.25V32H18.2L28,33.72A2,2,0,0,1,29.58,36ZM12.25,46H8V30h4.25ZM47,59v1H15V59a1,1,0,0,1,1-1H46A1,1,0,0,1,47,59Zm-5.87-3H20.87l2.67-4H38.46ZM54,49a1,1,0,0,1-1,1H9a1,1,0,0,1-1-1V48h5.25a1,1,0,0,0,1-1V46H32.08a7,7,0,0,0,4.73-1.84l8.8-8.07a4.07,4.07,0,0,0,.51-5.6A3.91,3.91,0,0,0,43.31,29a4,4,0,0,0-3,1l-5.92,5.43a1,1,0,0,1-.77.26l-2-.18a4,4,0,0,0-3.3-3.84L18.46,30a.5.5,0,0,0-.17,0h-4V29a1,1,0,0,0-1-1H8V23a1,1,0,0,1,1-1H21.11a12,12,0,0,0,21.78,0H53a1,1,0,0,1,1,1Z"/><path d="M14,16a4,4,0,1,0-4-4A4,4,0,0,0,14,16Zm0-6a2,2,0,1,1-2,2A2,2,0,0,1,14,10Z"/><path d="M50,12a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0v8A1,1,0,0,0,50,12Z"/><path d="M44,9a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V8A1,1,0,0,0,44,9Z"/><path d="M21,8a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V7A1,1,0,0,0,21,8Z"/><path d="M14,6a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V5A1,1,0,0,0,14,6Z"/><path d="M32,21a1.5,1.5,0,0,1-1.5-1.5,1,1,0,0,0-2,0A3.5,3.5,0,0,0,31,22.84V24a1,1,0,0,0,2,0V22.84A3.49,3.49,0,0,0,32,16a1.5,1.5,0,1,1,1.5-1.5,1,1,0,0,0,2,0A3.5,3.5,0,0,0,33,11.16V10a1,1,0,0,0-2,0v1.16A3.49,3.49,0,0,0,32,18a1.5,1.5,0,0,1,0,3Z"/></g></g></svg>                           
                         </div>
-                        <a href="" class="s-contact__link">
+                        <a href="#workPopap" class="s-contact__link JS-contact-popap">
                             Want to work together?
                         </a>
                         <h4 class="s-contact__subtitle">
@@ -492,7 +511,7 @@
                         <div class="s-contact__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512"><g id="Outline"><g><path d="M30.221,5.771,32,4.3l1.779,1.473a1,1,0,0,0,1.275-1.542l-2.416-2a1,1,0,0,0-1.276,0l-2.416,2a1,1,0,0,0,1.275,1.542Z"/><path d="M61.636,26.234l0-.005-5-4.137a1,1,0,1,0-1.276,1.541L59.431,27,43.4,40.268a11.99,11.99,0,0,0-22.8,0L13,33.977V18h7a1,1,0,0,0,1-1V10H51V29.448a1,1,0,1,0,2,0V9a1,1,0,0,0-1-1H20a1,1,0,0,0-.707.293l-8,8A1,1,0,0,0,11,17V32.322L4.569,27l4.069-3.367a1,1,0,1,0-1.276-1.541l-5,4.137,0,.005A.993.993,0,0,0,2,27V41a1,1,0,0,0,2,0V29.125L20.111,42.458a10.766,10.766,0,0,0,0,3.084L4,58.874V45a1,1,0,0,0-2,0V61a1,1,0,0,0,1,1H61a1,1,0,0,0,1-1V27A.993.993,0,0,0,61.636,26.234ZM19,16H14.414L19,11.414ZM32,34A10,10,0,1,1,22,44,10.011,10.011,0,0,1,32,34Zm0,22A11.917,11.917,0,0,0,43.889,42.458L60,29.125V58.874L46.847,47.989a1,1,0,0,0-1.275,1.541L58.223,60H5.777L20.6,47.732A12.016,12.016,0,0,0,32,56Z"/><path d="M27,49a1,1,0,0,0,1-1V42.762l3.232,3.878a1.014,1.014,0,0,0,.789.36,1,1,0,0,0,.774-.393l2.787-3.65V48a1,1,0,0,0,2,0V40a1,1,0,0,0-1.8-.607l-3.821,5-4.2-5.037A1,1,0,0,0,26,40v8A1,1,0,0,0,27,49Z"/><path d="M44,23a1,1,0,0,0-1-1H22a1,1,0,0,0,0,2H43A1,1,0,0,0,44,23Z"/><path d="M22,27a1,1,0,0,0,0,2H39a1,1,0,0,0,0-2Z"/><path d="M43,17H27a1,1,0,0,0,0,2H43a1,1,0,0,0,0-2Z"/></g></g></svg>                    
                         </div>
-                        <a href="" class="s-contact__link">
+                        <a href="#contactPopap" class="s-contact__link JS-contact-popap">
                             Contact us
                         </a>
                         <h4 class="s-contact__subtitle">
@@ -537,6 +556,65 @@
         </div>
     </div>
 </footer>
+
+<div id="contactPopap" class="c-popup u-bg-white mfp-hide">
+    <span class="c-popup__close JS-close-popap fas fa-times"></span>
+    <div class="c-popup__title">
+        <h2 class="c-titles__secondary">
+            Contact Us
+        </h2>
+    </div>
+    <form class="c-form">
+        <div class="c-form__control c-form__control--small">
+            <input type="text" id="name" class="c-form__input" placeholder="&nbsp;">
+            <label for="name" class="c-form__label c-form__label--required">Name</label>
+        </div>
+        <div class="c-form__control c-form__control--small">
+            <input type="text" id="surname" class="c-form__input" placeholder="&nbsp;">
+            <label for="surname" class="c-form__label c-form__label--required">Surname</label>
+        </div>
+        <div class="c-form__control">
+            <input type="email" id="email" class="c-form__input" placeholder="&nbsp;">
+            <label for="email" class="c-form__label c-form__label--required">Email</label>
+        </div>
+        <div class="c-form__control">
+            <textarea class="c-form__input" placeholder="&nbsp;"></textarea>
+            <label class="c-form__label">Message</label>
+        </div>
+        <div class="c-form__control c-form__btn">
+            <button class="c-btn c-secondary">Send <span class="fas fa-envelope"></span></button>
+        </div>
+    </form>
+</div>
+
+<div id="workPopap" class="c-popup u-bg-white mfp-hide">
+    <div class="c-popup__title">
+        <h2 class="c-titles__secondary">
+            Work with us?
+        </h2>
+    </div>
+    <form class="c-form">
+        <div class="c-form__control c-form__control--small">
+            <input type="text" id="name" class="c-form__input" placeholder="&nbsp;">
+            <label for="name" class="c-form__label c-form__label--required">Company name</label>
+        </div>
+        <div class="c-form__control c-form__control--small">
+            <input type="text" id="location" class="c-form__input" placeholder="&nbsp;">
+            <label for="location" class="c-form__label c-form__label--required">Company location</label>
+        </div>
+        <div class="c-form__control">
+            <input type="email" id="email" class="c-form__input" placeholder="&nbsp;">
+            <label for="email" class="c-form__label c-form__label--required">Email</label>
+        </div>
+        <div class="c-form__control">
+            <textarea class="c-form__input" placeholder="&nbsp;"></textarea>
+            <label class="c-form__label">Message</label>
+        </div>
+        <div class="c-form__control c-form__btn">
+            <button class="c-btn c-secondary">Send <span class="fas fa-envelope"></span></button>
+        </div>
+    </form>
+</div>
 
 <script src="dist/js/jquery.min.js"></script>
 <script src="dist/js/scripts.min.js"></script>

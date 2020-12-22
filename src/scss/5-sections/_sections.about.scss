@@ -3,15 +3,18 @@
 
 	position: relative;
 
-	@include mq($md){
+	@include mq($lg){
 		padding: 130px 0;
 	}
 	&:hover{
 		.c-titles__secondary{
 			&::after{
-				width: calc(100% + 150px);
-
-				border-color: palette(secondary);
+		    width: calc(100% + 40px);
+        border-color: palette(secondary);
+        
+        @include mq($md){
+          width: calc(100% + 150px);
+        }
 			}
 		}
 	}

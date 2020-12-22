@@ -1,0 +1,64 @@
+.c-popup{
+	position: relative;
+
+	max-width: 650px;
+	padding: 30px;
+
+	margin: 0 auto;
+
+	box-shadow: 0px 0px 20px palette(primary);
+
+	@include mq($md){
+		padding: 80px 30px;
+	}
+
+	&:hover{
+		.c-titles__secondary{
+			&::after{
+				width: calc(100% + 40px);
+        border-color: palette(secondary);
+        
+        @include mq($md){
+          width: calc(100% + 150px);
+        }
+			}
+		}
+	}
+}
+
+.c-popup__close{
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	transform: translateY(-50%);
+
+	@include font-size(mid-l);
+
+	cursor: pointer;
+	&:before{
+		color: rgba(palette(primary), 0.7);
+		transition: color .3s ease-in;
+	}
+
+	&:hover{
+		&:before{
+			color: palette(secondary);
+		}
+	}
+}
+
+.c-popup__title{
+	margin-bottom: 30px;
+}
+
+.c-popap-wrapper{
+	&.mfp-bg{
+		background-color: palette(grey-color, 400);
+		opacity: 0.5;
+	}
+}
+
+body.c-popup--helper{
+	overflow: hidden;
+	width: 100%;
+}

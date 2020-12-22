@@ -17,7 +17,7 @@
 	@include mq($max:$lg){
 		height: 100vh;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: flex-start;
 		align-items: flex-end;
 	}
 }
@@ -28,6 +28,9 @@
 	position: relative;
 
 	width: 100%;
+
+	margin-bottom: 60px;
+
 	text-align: center;
 
 	&:after{
@@ -44,6 +47,7 @@
 		background-color: rgba(palette(secondary),0.5);
 		transform: skew(-30deg, 0deg);
 		@include mq($lg){
+			margin-bottom: 0;
 			left: initial;
 			right: 0;
 			z-index: 1;
@@ -51,7 +55,9 @@
 			width: 18px;
 	
 			padding-top: 5px;
-	
+			
+			background-color: transparent;
+
 			border-bottom: 2px solid palette(secondary);
 
 			transform: none;

@@ -4,8 +4,6 @@ $(document).ready(function() {
 
 	function gridPosition(){
 		var gridItem = $(gridContainer).find('.с-grid__item');
-
-		var gridItemsArray = [];
 		
 		gridItem.each(function(){
 			var gridItemVisible = $(this).css('display');
@@ -14,7 +12,6 @@ $(document).ready(function() {
 				$(this).filter(':nth-child(2n+1)').addClass('с-grid__item--right');
 			}
 		});
-		console.log(gridItemsArray)
 	}
 
 	gridPosition();
