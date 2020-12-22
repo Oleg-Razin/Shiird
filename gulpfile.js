@@ -37,7 +37,7 @@ var inputs = {
     js: paths.src + 'js',
     css: paths.src + 'css',
     scss: paths.src + 'scss',
-    img: paths.src + 'img',
+    img: paths.src + 'image',
     sprites: paths.src + 'sprites',
     css_img_path: '../img'
 };
@@ -242,9 +242,9 @@ gulp.task('clean-sprites', ['rename-sprites'], function () {
 gulp.task('zipDelivery', function () {
     var date = new Date().toLocaleDateString().replace(/[^0-9]/g, '');
     return gulp.src(['*.html',
-        inputs.css + '/**',
+        outputs.css + '/**',
         inputs.img + '/**',
-        inputs.js + '/**'], { base: "." })
+        outputs.js + '/**'], { base: "." })
         .pipe(plumber())
         .pipe(zip('delivery-' + date + '.zip'))
         .pipe(gulp.dest(paths.dist))
